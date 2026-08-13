@@ -55,10 +55,12 @@ Python, pandas, matplotlib/seaborn, scipy (pruebas estadísticas), Jupyter.
 
 ## Estructura del repo
 
-- `/data` — Dataset Olist (Kaggle) [no incluido en git, ver instrucciones abajo]
+- `/data` — Dataset Olist (Kaggle), incluido en el repo
 - `/notebooks` — Análisis exploratorio y modelado
-- `/src` — Scripts reutilizables
-- `/reports` — Reportes exportados
+- `/src` — Scripts reutilizables (carga y limpieza de datos)
+- `/reports` — Tablas agregadas exportadas, usadas por el dashboard
+- `/models` — Modelo entrenado serializado (.pkl)
+- `/assets` — Capturas del dashboard para este README
 
 ## Fuentes de datos
 
@@ -68,10 +70,22 @@ Python, pandas, matplotlib/seaborn, scipy (pruebas estadísticas), Jupyter.
 ## Cómo replicar
 
 \`\`\`bash
+git clone https://github.com/Rob3rtoSanchez/ecommerce-analytics-portfolio.git
+cd ecommerce-analytics-portfolio
 python -m venv venv
 source venv/Scripts/activate  # Windows Git Bash
 pip install -r requirements.txt
 \`\`\`
+
+**Para explorar el análisis y modelado:**
+Abre los notebooks en `/notebooks` con Jupyter o VS Code, en orden numérico.
+
+**Para correr el dashboard localmente:**
+\`\`\`bash
+streamlit run app.py
+\`\`\`
+
+O visita la demo desplegada: [ecommerce-analytics-portfolio.streamlit.app](https://ecommerce-analytics-portfolio-bvghquvjepnpsvq9tdm9hn.streamlit.app)
 
 ## Autor
 
